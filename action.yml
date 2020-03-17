@@ -1,0 +1,21 @@
+name: 'Needs Attention'
+description: 'Applies a label whenever the original author of an issue adds a comment to an issue that needed their response.'
+inputs:
+  response-required-label:
+    description: 'The name of the label that indicates an issue that needs a response from the author.'
+    default: 'Needs Author Feedback'
+  needs-attention-label:
+    description: 'The name of the label that indicates an issue that needs attention.'
+    default: 'Needs Attention'
+  perform:
+    description: 'Whether to perform any action, if needed. Set to false to do a dry-run.'
+    default: true
+  repo-token:
+    description: 'The GITHUB_TOKEN for the repository being acted on.'
+    required: true
+outputs:
+  result:
+    description: 'A string description of any actions taken.'
+runs:
+  using: 'node12'
+  main: 'index.js'

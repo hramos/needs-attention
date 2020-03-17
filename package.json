@@ -1,0 +1,24 @@
+{
+  "name": "needs-attention",
+  "version": "1.0.0",
+  "description": "A GitHub Action that flags issues that need attention.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hramos/needs-attention.git"
+  },
+  "keywords": [ "actions", "needs attention"],
+  "author": "Héctor Ramos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hramos/needs-attention/issues"
+  },
+  "homepage": "https://github.com/hramos/needs-attention#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  }
+}
