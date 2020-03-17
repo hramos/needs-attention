@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Needs Attention Label
+      - name: Apply Needs Attention Label
         uses: hramos/needs-attention@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
