@@ -10,7 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/hramos/needs-attention.git"
   },
-  "keywords": [ "actions", "needs attention"],
+  "keywords": [
+    "actions",
+    "needs attention"
+  ],
   "author": "Héctor Ramos",
   "license": "MIT",
   "bugs": {
