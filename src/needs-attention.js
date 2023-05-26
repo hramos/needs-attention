@@ -25,7 +25,7 @@ async function run() {
 
     if (isMarked && issue.user.login === comment.user.login) {
       if (perform) {
-        console.log(`${owner}/${repo}#${issue_number} needs attention`);
+        console.log(`[Actions:needs-attention]: ${owner}/${repo}#${issue_number} needs attention`);
         await octokit.issues.removeLabel({
           owner,
           repo,
@@ -44,7 +44,7 @@ async function run() {
         );
       } else {
         console.log(
-          `${owner}/${repo}#${issue_number} would have been flagged as needing attention (dry-run)`,
+          `[Actions:needs-attention]: ${owner}/${repo}#${issue_number} would have been flagged as needing attention (dry-run)`,
         );
         core.setOutput('result', 'dry-run');
       }
