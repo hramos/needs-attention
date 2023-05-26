@@ -8,7 +8,7 @@
     "url": "https://github.com/hramos/needs-attention/issues"
   },
   "homepage": "https://github.com/hramos/needs-attention#readme",
-  "main": "lib/main.js",
+  "main": "lib/index.js",
   "engines": {
     "node": ">=16.0.0"
   },
@@ -16,7 +16,8 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write \"./**/*.{js,md,yml,ts}\"",
-    "format-check": "prettier --list-different \"./**/*.{js,md,yml,ts}\""
+    "format-check": "prettier --list-different \"./**/*.{js,md,yml,ts}\"",
+    "clean": "rm -rf ./lib"
   },
   "repository": {
     "type": "git",
