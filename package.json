@@ -8,7 +8,7 @@
     "url": "https://github.com/hramos/needs-attention/issues"
   },
   "homepage": "https://github.com/hramos/needs-attention#readme",
-  "main": "index.js",
+  "main": "lib/main.js",
   "engines": {
     "node": ">=16.0.0"
   },

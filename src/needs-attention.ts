@@ -1,19 +1,18 @@
-const core = require('@actions/core');
-const github = require('@actions/github');
-
-const myToken = core.getInput('repo-token');
-const octokit = new github.GitHub(myToken);
+import * as core from '@actions/core'
+import * as github from '@actions/github'
 
 /**
  * Check if the issue is marked as needing attention, and this comment's
  * author is the original issue author.
- */
+*/
 async function run() {
   try {
-    const {owner, repo} = github.context.repo;
-    const {issue, comment} = github.context.payload;
-    const labels = issue.labels;
-    const issue_number = issue.number;
+    const octokit = github.getOctokit(core.getInput('token'), {required: true});
+    const context = github.context;
+    const {owner, repo} = context.repo;
+    const {issue, comment} = context.payload;
+    const labels = issue?.labels;
+    const issue_number: number = issue?.number as number;
 
     const responseRequiredLabel = core.getInput('response-required-label');
     const needsAttentionLabel = core.getInput('needs-attention-label');
@@ -23,16 +22,16 @@ async function run() {
       .map(label => label.name)
       .includes(responseRequiredLabel);
 
-    if (isMarked && issue.user.login === comment.user.login) {
+    if (isMarked && issue?.user.login === comment?.user.login) {
       if (perform) {
         console.log(`[Actions:needs-attention]: ${owner}/${repo}#${issue_number} needs attention`);
-        await octokit.issues.removeLabel({
+        await octokit.rest.issues.removeLabel({
           owner,
           repo,
           issue_number,
           name: responseRequiredLabel,
         });
-        await octokit.issues.addLabels({
+        await octokit.rest.issues.addLabels({
           owner,
           repo,
           issue_number,
@@ -54,7 +53,7 @@ async function run() {
         `${owner}/${repo}#${issue_number} does not need attention`,
       );
     }
-  } catch (error) {
+  } catch (error: any) {
     core.setFailed(error.message);
   }
 }
