@@ -20,5 +20,5 @@ runs:
   using: 'node12'
   main: 'src/needs-attention.js'
 branding:
-  icon: 'flag'  
+  icon: 'flag'
   color: 'red'
