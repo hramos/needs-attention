@@ -10,7 +10,7 @@ If the original author of an issue adds a comment on their issue, and that issue
 
 ### `response-required-label`
 
-The name of the label that indicates an issue that needs a response from the author. Default  `"Needs Author Feedback"`.
+The name of the label that indicates an issue that needs a response from the author. Default `"Needs Author Feedback"`.
 
 ### `needs-attention-label`
 
@@ -40,7 +40,7 @@ jobs:
     name: Apply Needs Attention Label
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Apply Needs Attention Label
         uses: hramos/needs-attention@v1
         with:

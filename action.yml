@@ -17,8 +17,8 @@ outputs:
   result:
     description: 'A string description of any actions taken.'
 runs:
-  using: 'node12'
-  main: 'src/needs-attention.js'
+  using: 'node16'
+  main: 'lib/index.js'
 branding:
-  icon: 'flag'  
+  icon: 'flag'
   color: 'red'

@@ -1,10 +1,23 @@
 {
   "name": "needs-attention",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A GitHub Action that flags issues that need attention.",
-  "main": "index.js",
+  "author": "Héctor Ramos, Pranav Yadav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hramos/needs-attention/issues"
+  },
+  "homepage": "https://github.com/hramos/needs-attention#readme",
+  "main": "lib/index.js",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"./**/*.{js,md,yml,ts}\"",
+    "format-check": "prettier --list-different \"./**/*.{js,md,yml,ts}\"",
+    "clean": "rm -rf ./lib"
   },
   "repository": {
     "type": "git",
@@ -14,14 +27,13 @@
     "actions",
     "needs attention"
   ],
-  "author": "Héctor Ramos",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/hramos/needs-attention/issues"
-  },
-  "homepage": "https://github.com/hramos/needs-attention#readme",
   "dependencies": {
-    "@actions/core": "^1.9.1",
-    "@actions/github": "^2.1.1"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.4",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
   }
 }
