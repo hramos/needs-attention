@@ -7,7 +7,7 @@ import * as github from '@actions/github';
  */
 async function run(): Promise<void> {
   try {
-    const octokit = github.getOctokit(core.getInput('token'), {required: true});
+    const octokit = github.getOctokit(core.getInput('repo-token'), {required: true});
     const context = github.context;
     const {owner, repo} = context.repo;
     const {issue, comment} = context.payload;
