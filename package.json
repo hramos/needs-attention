@@ -13,7 +13,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "ncc build src/index.ts -o lib",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write \"./**/*.{js,md,yml,ts}\"",
     "format-check": "prettier --list-different \"./**/*.{js,md,yml,ts}\"",
