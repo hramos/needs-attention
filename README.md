@@ -56,3 +56,49 @@ with:
     response-required-label: 'Needs Author Feedback'
     needs-attention-label: 'Needs Attention'
 ```
+
+
+## Prerequisites
+
+In order to run this project, you will need to have the following installed on your computer:
+- nodejs
+- yarn | npm
+
+## Installation
+
+To install the application, follow these steps:
+
+1.  Clone the repository to your local machine:
+
+ 
+```bash
+git clone https://github.com/hramos/needs-attention
+```
+
+2. Navigate to the project directory in your terminal.
+
+ 
+```bash
+  cd needs-attention
+```
+3. Run `yarn` to install the necessary packages.
+
+ 
+```bash
+  yarn
+```
+
+## usage
+
+To start the application, run yarn build. This will start the application.
+
+```bash
+yarn build
+```
+
+## Contributing
+
+Contributions to this project are welcome. 
+If you encounter any issues or have suggestions for improvement, please open an issue on the GitHub repository.
+
+Before contributing, please review the contribution guidelines at contribution.md file
