@@ -21,38 +21,5 @@
 ### Submit a pull request: 
  When you are ready to contribute your changes back to the main project, submit a pull request. This will allow the project maintainers to review your changes and merge them into the main project if they are deemed appropriate.
  
- ### How to build the project
-   #### Prerequisites
-
-  In order to run this project, you will need to have the following installed on your computer:
-  - nodejs
-  - yarn | npm
-
-  #### Installation
-  To install the application, follow these steps:
-
-   1.  Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/hramos/needs-attention
-```
-
-2. Navigate to the project directory in your terminal.
-
- 
-```bash
-  cd needs-attention
-```
-3. Run `yarn` to install the necessary packages.
-
-  #### usage
-
-  To build the application, run yarn build.
-
-  ```bash
-  yarn build
-  ```
-
-
 ### 🤗 Be kind and respectful: 
  Remember that you are contributing to a community project. Be respectful of others' contributions and opinions, and be open to feedback on your own work. Avoid using offensive language or engaging in personal attacks.
