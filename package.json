@@ -1,6 +1,6 @@
 {
   "name": "needs-attention",
-  "version": "2.0.0-rc.2",
+  "version": "2.0.0",
   "description": "A GitHub Action that flags issues that need attention.",
   "author": "Héctor Ramos, Pranav Yadav",
   "license": "MIT",
@@ -25,7 +25,9 @@
   },
   "keywords": [
     "actions",
-    "needs attention"
+    "needs attention",
+    "labels",
+    "issue labels"
   ],
   "dependencies": {
     "@actions/core": "^1.10.0",
