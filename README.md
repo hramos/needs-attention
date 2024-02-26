@@ -40,9 +40,9 @@ jobs:
     name: Apply Needs Attention Label
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Apply Needs Attention Label
-        uses: hramos/needs-attention@v1
+        uses: hramos/needs-attention@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -50,7 +50,7 @@ jobs:
 Configuring labels:
 
 ```
-uses: hramos/needs-attention@v1
+uses: hramos/needs-attention@v2
 with:
     repo-token: ${{ secrets.GITHUB_TOKEN }}
     response-required-label: 'Needs Author Feedback'
