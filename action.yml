@@ -17,7 +17,7 @@ outputs:
   result:
     description: 'A string description of any actions taken.'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'lib/index.js'
 branding:
   icon: 'flag'
