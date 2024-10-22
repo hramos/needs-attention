@@ -42,7 +42,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Apply Needs Attention Label
-        uses: hramos/needs-attention@v2
+        uses: hramos/needs-attention@v2.0.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
